@@ -35,5 +35,8 @@
     "lerna": "^2.0.0-rc.1",
     "prettier": "^0.22.0",
     "prettier-eslint-cli": "^3.2.0"
+  },
+  "dependencies": {
+    "glamor": "^2.20.24"
   }
 }

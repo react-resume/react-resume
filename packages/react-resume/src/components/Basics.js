@@ -5,11 +5,16 @@ import { Summary } from "./Common";
 import Section from "./Section";
 
 class Name extends React.Component {
+  static contextTypes = {
+    theme: React.PropTypes.object,
+  };
+
   render() {
-    const { value, children, ...props } = this.props;
+    const { theme } = this.context;
+    const { value, children, style, ...props } = this.props;
     return (
       <Div>
-        <H1 {...props}>
+        <H1 style={{ ...theme.Basics.Name, ...style }} {...props}>
           {value}
           {children}
         </H1>
@@ -19,10 +24,15 @@ class Name extends React.Component {
 }
 
 class Label extends React.Component {
+  static contextTypes = {
+    theme: React.PropTypes.object,
+  };
+
   render() {
-    const { value, children, ...props } = this.props;
+    const { theme } = this.context;
+    const { value, children, style, ...props } = this.props;
     return (
-      <P {...props}>
+      <P style={{ ...theme.Basics.Label, ...style }} {...props}>
         {value}
         {children}
       </P>
@@ -31,10 +41,19 @@ class Label extends React.Component {
 }
 
 class Email extends React.Component {
+  static contextTypes = {
+    theme: React.PropTypes.object,
+  };
+
   render() {
-    const { value, children, ...props } = this.props;
+    const { theme } = this.context;
+    const { value, children, style, ...props } = this.props;
     return (
-      <A href={`mailto:${value || children}`} {...props}>
+      <A
+        style={{ ...theme.Basics.Email, ...style }}
+        href={`mailto:${value || children}`}
+        {...props}
+      >
         <P>
           {children || value}
         </P>
@@ -44,10 +63,19 @@ class Email extends React.Component {
 }
 
 class Phone extends React.Component {
+  static contextTypes = {
+    theme: React.PropTypes.object,
+  };
+
   render() {
-    const { value, children, ...props } = this.props;
+    const { theme } = this.context;
+    const { value, children, style, ...props } = this.props;
     return (
-      <A href={`tel:${value || children}`} {...props}>
+      <A
+        style={{ ...theme.Basics.Phone, ...style }}
+        href={`tel:${value || children}`}
+        {...props}
+      >
         <P>
           {children || value}
         </P>
@@ -57,10 +85,19 @@ class Phone extends React.Component {
 }
 
 class Website extends React.Component {
+  static contextTypes = {
+    theme: React.PropTypes.object,
+  };
+
   render() {
-    const { value, children, ...props } = this.props;
+    const { theme } = this.context;
+    const { value, children, style, ...props } = this.props;
     return (
-      <A href={`${value || children}`} {...props}>
+      <A
+        style={{ ...theme.Basics.Website, ...style }}
+        href={`${value || children}`}
+        {...props}
+      >
         <P>
           {children || value}
         </P>
@@ -70,10 +107,19 @@ class Website extends React.Component {
 }
 
 class Location extends React.Component {
+  static contextTypes = {
+    theme: React.PropTypes.object,
+  };
+
   render() {
-    const { value, children, ...props } = this.props;
+    const { theme } = this.context;
+    const { value, children, style, ...props } = this.props;
     return (
-      <A href={`https://maps.google.com/?q=${value || children}`} {...props}>
+      <A
+        style={{ ...theme.Basics.Location, ...style }}
+        href={`https://maps.google.com/?q=${value || children}`}
+        {...props}
+      >
         <P>
           {children || value}
         </P>
@@ -83,17 +129,31 @@ class Location extends React.Component {
 }
 
 class Picture extends React.Component {
+  static contextTypes = {
+    theme: React.PropTypes.object,
+  };
+
   render() {
-    return <Img {...this.props} />;
+    const { theme } = this.context;
+    const { style, ...props } = this.props;
+    return <Img style={{ ...theme.Basics.Picture, ...style }} {...props} />;
   }
 }
 
 class Profile extends React.Component {
+  static contextTypes = {
+    theme: React.PropTypes.object,
+  };
+
   render() {
-    const { network, username, url, children, ...props } = this.props;
+    const { theme } = this.context;
+    const { style, network, username, url, children, ...props } = this.props;
     return (
       <LI {...props}>
-        <A href={url || `https://${network}.com/${username}`}>
+        <A
+          style={{ ...theme.Basics.Profile, ...style }}
+          href={url || `https://${network}.com/${username}`}
+        >
           {children || username}
         </A>
       </LI>
@@ -102,10 +162,15 @@ class Profile extends React.Component {
 }
 
 class Profiles extends React.Component {
+  static contextTypes = {
+    theme: React.PropTypes.object,
+  };
+
   render() {
-    const { children, ...props } = this.props;
+    const { theme } = this.context;
+    const { style, children, ...props } = this.props;
     return (
-      <UL {...props}>
+      <UL style={{ ...theme.Basics.Profiles, ...style }} {...props}>
         {children}
       </UL>
     );
@@ -113,6 +178,10 @@ class Profiles extends React.Component {
 }
 
 export default class Basics extends React.Component {
+  static contextTypes = {
+    theme: React.PropTypes.object,
+  };
+
   static Summary = Summary;
 
   static Name = Name;
@@ -127,9 +196,10 @@ export default class Basics extends React.Component {
   static Profiles = Profiles;
 
   render() {
-    const { children, ...props } = this.props;
+    const { theme } = this.context;
+    const { style, children, ...props } = this.props;
     return (
-      <Section {...props}>
+      <Section style={{ ...theme.Basics.Basics, ...style }} {...props}>
         {children}
       </Section>
     );

@@ -6,7 +6,7 @@ const Main = styled.article`
   max-width: 30em;
 `;
 
-export default class Doc extends React.Component {
+export default class Document extends React.Component {
   static defaultProps = {
     theme: {},
   };

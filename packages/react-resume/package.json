@@ -19,6 +19,7 @@
     ]
   },
   "dependencies": {
+    "moment": "^2.18.1",
     "react": "^15.5.3",
     "styled-components": "^1.4.4"
   }

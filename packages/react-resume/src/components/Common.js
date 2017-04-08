@@ -1,7 +1,14 @@
-import React from "react";
 import styled from "styled-components";
 
 export const H1 = styled.h1`
+
+`;
+
+export const H2 = styled.h2`
+
+`;
+
+export const H3 = styled.h3`
 
 `;
 
@@ -9,10 +16,22 @@ export const Div = styled.div`
 
 `;
 
-export const UL = styled.div`
+export const P = styled.p`
 
 `;
 
-export const LI = styled.div`
+export const Span = styled.span`
+
+`;
+
+export const A = styled.a`
+
+`;
+
+export const UL = styled.ul`
+
+`;
+
+export const LI = styled.li`
 
 `;

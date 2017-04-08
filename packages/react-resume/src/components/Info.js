@@ -1,14 +1,30 @@
 import React from "react";
 import styled from "styled-components";
 
-// import { UL, LI } from "./Common";
+import { UL, LI, A } from "./Common";
 
 class Item extends React.Component {
+  static convert(type, argument) {
+    switch (type) {
+      case "email":
+        return `mailto:${argument}`;
+      case "phone":
+        return `tel:${argument}`;
+      case "address":
+        return `http://maps.google.com/?q=${argument}`;
+      default:
+        return argument;
+    }
+  }
+
   render() {
+    const { type, value, children, ...props } = this.props;
     return (
-      <div>
-        {this.props.children}
-      </div>
+      <LI {...props}>
+        <A href={Item.convert(type, value || children)}>
+          {children}
+        </A>
+      </LI>
     );
   }
 }
@@ -19,9 +35,9 @@ export default class Info extends React.Component {
   render() {
     const theme = this.props.theme || this.context.theme || {};
     return (
-      <div style={theme.info}>
+      <UL style={theme.info}>
         {this.props.children}
-      </div>
+      </UL>
     );
   }
 }

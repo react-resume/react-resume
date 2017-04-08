@@ -9,12 +9,12 @@ module.exports = {
   },
   "env": {
     "es6": true,
-    "jest": true,
     "browser": true,
     "node": true,
   },
   "extends": [
     "eslint:recommended",
+    "plugin:react/recommended",
     "prettier",
     "prettier/react",
   ],
@@ -25,6 +25,8 @@ module.exports = {
   "rules": {
     "prettier/prettier": ["error", {
       "trailingComma": "es5",
-    }]
-  }
+    }],
+    "no-unused-vars": 0,
+    "react/prop-types": 0,
+  },
 };

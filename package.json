@@ -1,0 +1,16 @@
+{
+  "name": "react-resume",
+  "version": "1.0.0",
+  "description": "Build your resumé/CV with React",
+  "main": "lib/index.js",
+  "scripts": {
+    "postinstall": "lerna bootstrap",
+    "clean": "lerna clean"
+  },
+  "repository": "https://github.com/react-resume/react-resume.git",
+  "author": "Patricio López <lopezjuripatricio@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "lerna": "^2.0.0-rc.1"
+  }
+}

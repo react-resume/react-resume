@@ -3,6 +3,7 @@ import React from "react";
 
 import { Div, H1, P, A, UL, LI, Img } from "./HTML";
 import { Summary } from "./Common";
+import Section from "./Section";
 
 class Name extends React.Component {
   render() {
@@ -129,9 +130,9 @@ export default class Basics extends React.Component {
   render() {
     const { children, ...props } = this.props;
     return (
-      <Div {...props}>
+      <Section {...props}>
         {children}
-      </Div>
+      </Section>
     );
   }
 }

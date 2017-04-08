@@ -1,45 +1,25 @@
-import styled from "styled-components";
+import glamorous from "glamorous";
 
-export const H1 = styled.h1`
+export const Section = glamorous.section({});
 
-`;
+export const H1 = glamorous.h1({});
 
-export const H2 = styled.h2`
+export const H2 = glamorous.h2({});
 
-`;
+export const H3 = glamorous.h3({});
 
-export const H3 = styled.h3`
+export const H4 = glamorous.h4({});
 
-`;
+export const Div = glamorous.div({});
 
-export const H4 = styled.h4`
+export const P = glamorous.p({});
 
-`;
+export const Span = glamorous.span({});
 
-export const Div = styled.div`
+export const A = glamorous.a({});
 
-`;
+export const UL = glamorous.ul({});
 
-export const P = styled.p`
+export const LI = glamorous.li({});
 
-`;
-
-export const Span = styled.span`
-
-`;
-
-export const A = styled.a`
-
-`;
-
-export const UL = styled.ul`
-
-`;
-
-export const LI = styled.li`
-
-`;
-
-export const Img = styled.img`
-
-`;
+export const Img = glamorous.img({});

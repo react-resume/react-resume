@@ -1,5 +1,4 @@
 import React from "react";
-// import styled from "styled-components";
 
 import { Div, H1, P, A, UL, LI, Img } from "./HTML";
 import { Summary } from "./Common";

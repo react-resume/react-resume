@@ -19,8 +19,9 @@
     ]
   },
   "dependencies": {
+    "glamor": "^2.20.24",
+    "glamorous": "^2.0.1",
     "moment": "^2.18.1",
-    "react": "^15.5.3",
-    "styled-components": "^1.4.4"
+    "react": "^15.5.3"
   }
 }

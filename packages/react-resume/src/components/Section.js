@@ -1,13 +1,8 @@
 import React from "react";
 import moment from "moment";
-import styled from "styled-components";
 
-import { H2, H3, H4, UL, LI, P } from "./HTML";
+import { Section as S, H2, H3, H4, UL, LI, P } from "./HTML";
 import { Summary } from "./Common";
-
-const Container = styled.div`
-
-`;
 
 class Title extends React.Component {
   render() {
@@ -146,9 +141,9 @@ export default class Section extends React.Component {
   render() {
     const theme = this.props.theme || this.context.theme || {};
     return (
-      <Container style={theme.work}>
+      <S style={theme.work}>
         {this.props.children}
-      </Container>
+      </S>
     );
   }
 }

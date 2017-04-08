@@ -85,9 +85,33 @@ class ItemPeriod extends React.Component {
   }
 }
 
+class Highlights extends React.Component {
+  render() {
+    const { children, ...props } = this.props;
+    return (
+      <UL {...props}>
+        {children}
+      </UL>
+    );
+  }
+}
+
+class Highlight extends React.Component {
+  render() {
+    const { children, ...props } = this.props;
+    return (
+      <LI {...props}>
+        {children}
+      </LI>
+    );
+  }
+}
+
 class Item extends React.Component {
   static Title = ItemTitle;
   static Lead = ItemLead;
+  static Highlight = Highlight;
+  static Highlights = Highlights;
 
   static Period = ItemPeriod;
   static Summary = Summary;

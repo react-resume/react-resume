@@ -30,7 +30,7 @@ class Item extends React.Component {
   }
 }
 
-export default class Work extends React.Component {
+export default class Volunteer extends React.Component {
   static Title = Section.Title;
   static Items = Section.Items;
   static Item = Item;
@@ -38,7 +38,7 @@ export default class Work extends React.Component {
   render() {
     const theme = this.props.theme || this.context.theme || {};
     return (
-      <Section style={theme.work}>
+      <Section style={theme.volunteer}>
         {this.props.children}
       </Section>
     );

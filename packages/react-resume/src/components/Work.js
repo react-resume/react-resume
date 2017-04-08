@@ -2,7 +2,7 @@ import React from "react";
 import moment from "moment";
 import styled from "styled-components";
 
-import { H2, H3, UL, LI, Span, P, A } from "./Common";
+import { H2, H3, UL, LI, Span, P, A } from "./HTML";
 
 const Container = styled.div`
 
@@ -82,7 +82,11 @@ class Period extends React.Component {
 
   render() {
     const { start, end, format, ...props } = this.props;
-    const content = this.renderContent(moment(start || null), moment(end || null), format);
+    const content = this.renderContent(
+      moment(start || null),
+      moment(end || null),
+      format
+    );
     return (
       <P {...props}>
         {content}

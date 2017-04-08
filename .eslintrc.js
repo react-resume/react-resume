@@ -26,7 +26,7 @@ module.exports = {
     "prettier/prettier": ["error", {
       "trailingComma": "es5",
     }],
-    "no-unused-vars": 0,
+    "no-unused-vars": 1,
     "react/prop-types": 0,
   },
 };

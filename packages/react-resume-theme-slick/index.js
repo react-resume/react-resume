@@ -1,8 +1,4 @@
 module.exports = {
-  colors: {
-
-  },
-  fonts: {
-
-  },
+  colors: {},
+  fonts: {},
 };

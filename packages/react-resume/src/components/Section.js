@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import { Div, H2 } from "./Common";
+import { Div, H2 } from "./HTML";
 
 class Title extends React.Component {
   render() {

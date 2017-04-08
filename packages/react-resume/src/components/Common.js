@@ -1,37 +1,14 @@
-import styled from "styled-components";
+import React from "react";
 
-export const H1 = styled.h1`
+import { P } from "./HTML";
 
-`;
-
-export const H2 = styled.h2`
-
-`;
-
-export const H3 = styled.h3`
-
-`;
-
-export const Div = styled.div`
-
-`;
-
-export const P = styled.p`
-
-`;
-
-export const Span = styled.span`
-
-`;
-
-export const A = styled.a`
-
-`;
-
-export const UL = styled.ul`
-
-`;
-
-export const LI = styled.li`
-
-`;
+export class Summary extends React.Component {
+  render() {
+    const { children, ...props } = this.props;
+    return (
+      <P {...props}>
+        {children}
+      </P>
+    );
+  }
+}

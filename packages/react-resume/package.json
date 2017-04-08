@@ -9,7 +9,7 @@
     "build": "babel src --out-dir lib --source-maps"
   },
   "devDependencies": {
-    "babel-cli": "^6.23.0"
+    "babel-cli": "^6.24.1"
   },
   "babel": {
     "presets": [
@@ -17,5 +17,9 @@
       "es2015",
       "stage-0"
     ]
+  },
+  "dependencies": {
+    "react": "^15.5.3",
+    "styled-components": "^1.4.4"
   }
 }

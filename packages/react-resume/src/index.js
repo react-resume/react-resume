@@ -1,9 +1,4 @@
-import React from "react";
-
-class Core extends React.Component {
-  render() {
-    return <div />;
-  }
-}
-
-export default Core;
+export { default as Doc } from "./components/Doc";
+export { default as Info } from "./components/Info";
+export { default as Name } from "./components/Name";
+export { default as Section } from "./components/Section";

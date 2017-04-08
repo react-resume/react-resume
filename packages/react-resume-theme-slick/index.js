@@ -1,0 +1,8 @@
+module.exports = {
+  colors: {
+
+  },
+  fonts: {
+
+  },
+};

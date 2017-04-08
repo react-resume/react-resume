@@ -1,0 +1,8 @@
+{
+  "name": "react-resume",
+  "version": "1.0.0",
+  "description": "Core module",
+  "main": "lib/index.js",
+  "repository": "https://github.com/react-resume/react-resume.git",
+  "license": "MIT"
+}

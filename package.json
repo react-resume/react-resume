@@ -1,10 +1,10 @@
 {
   "name": "react-resume",
-  "version": "1.0.0",
   "description": "Build your resumé/CV with React",
   "main": "lib/index.js",
   "scripts": {
     "postinstall": "lerna bootstrap",
+    "build": "lerna exec -- yarn build",
     "clean": "lerna clean",
     "format": "prettier-eslint --write \"packages/**/*.js\"",
     "lint": "eslint packages"
@@ -12,7 +12,22 @@
   "repository": "https://github.com/react-resume/react-resume.git",
   "author": "Patricio López <lopezjuripatricio@gmail.com>",
   "license": "MIT",
+  "keywords": [
+    "react",
+    "lerna",
+    "resume",
+    "cv"
+  ],
+  "peerDependencies": {
+    "react": "~15.4.0"
+  },
   "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-eslint": "^7.1.1",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.23.0",
+    "babel-preset-stage-0": "^6.22.0",
     "eslint": "^3.19.0",
     "eslint-config-prettier": "^1.5.0",
     "eslint-plugin-prettier": "^2.0.1",

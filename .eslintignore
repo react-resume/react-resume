@@ -1,0 +1,8 @@
+node_modules/*
+lib/*
+build/*
+coverage/*
+packages/**/node_modules/*
+packages/**/lib/*
+packages/**/build/*
+packages/**/coverage/*

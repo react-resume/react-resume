@@ -48,7 +48,7 @@ class ResumeGithub extends React.Component {
     langs: [],
   };
 
-  componentWillMount() {
+  componentDidMount() {
     const { host, username } = this.props;
     this.fetchFromGithub(host, username);
   }

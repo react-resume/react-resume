@@ -2,7 +2,6 @@ import React from "react";
 import moment from "moment";
 
 import { Section as S, H2, H3, H4, UL, LI, P } from "react-resume-core";
-import { Summary } from "./Common";
 
 class Title extends React.Component {
   static contextTypes = {
@@ -62,6 +61,22 @@ class ItemLead extends React.Component {
     const { style, children, ...props } = this.props;
     return (
       <P style={{ ...theme.Section.Item.Lead, ...style }} {...props}>
+        {children}
+      </P>
+    );
+  }
+}
+
+class Summary extends React.Component {
+  static contextTypes = {
+    theme: React.PropTypes.object,
+  };
+
+  render() {
+    const { theme } = this.context;
+    const { style, children, ...props } = this.props;
+    return (
+      <P style={{ ...theme.Section.Item.Summary, ...style }} {...props}>
         {children}
       </P>
     );

@@ -114,6 +114,20 @@ export class Span extends React.Component {
   }
 }
 
+export class Blockquote extends React.Component {
+  static contextTypes = {
+    theme: React.PropTypes.object,
+  };
+
+  render() {
+    const { theme } = this.context;
+    const { style, ...props } = this.props;
+    return (
+      <blockquote style={{ ...theme.HTML.Blockquote, ...style }} {...props} />
+    );
+  }
+}
+
 export class A extends React.Component {
   static contextTypes = {
     theme: React.PropTypes.object,

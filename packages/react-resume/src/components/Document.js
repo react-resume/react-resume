@@ -14,6 +14,9 @@ const THEME = {
   Section: {
     Item: {},
   },
+  References: {
+    Item: {},
+  },
 };
 
 export default class Document extends React.Component {

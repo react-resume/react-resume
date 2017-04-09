@@ -19,6 +19,7 @@
     ]
   },
   "dependencies": {
+    "react-resume-core": "*",
     "glamor": "^2.20.24",
     "glamorous": "^2.0.1",
     "moment": "^2.18.1",

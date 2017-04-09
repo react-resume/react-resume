@@ -1,6 +1,6 @@
 import React from "react";
 
-import { A } from "./HTML";
+import { A } from "react-resume-core";
 import Section from "./Section";
 
 class Website extends React.Component {

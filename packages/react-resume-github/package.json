@@ -1,0 +1,23 @@
+{
+  "name": "react-resume-github",
+  "version": "0.0.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src --out-dir lib --source-maps"
+  },
+  "dependencies": {
+    "react": "^15.5.3",
+    "react-resume-core": "*"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      "es2015",
+      "stage-0"
+    ]
+  }
+}

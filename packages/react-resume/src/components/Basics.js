@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Div, H1, P, A, UL, LI, Img } from "./HTML";
+import { Div, H1, P, A, UL, LI, Img } from "react-resume-core";
 import { Summary } from "./Common";
 import Section from "./Section";
 

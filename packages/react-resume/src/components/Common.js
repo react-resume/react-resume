@@ -1,6 +1,6 @@
 import React from "react";
 
-import { P } from "./HTML";
+import { P } from "react-resume-core";
 
 export class Summary extends React.Component {
   render() {

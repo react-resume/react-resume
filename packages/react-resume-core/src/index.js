@@ -1,5 +1,11 @@
 import React from "react";
 
+const styles = {
+  UL: {
+    paddingLeft: 0,
+  },
+};
+
 export class Section extends React.Component {
   static contextTypes = {
     theme: React.PropTypes.object,
@@ -127,8 +133,23 @@ export class UL extends React.Component {
 
   render() {
     const { theme } = this.context;
-    const { style, ...props } = this.props;
-    return <ul style={{ ...theme.HTML.UL, ...style }} {...props} />;
+    const { style, bullets, ...props } = this.props;
+    return (
+      <ul
+        style={{
+          ...theme.HTML.UL,
+          ...(bullets
+            ? undefined
+            : {
+                listStyleType: "none",
+                listStyle: "none",
+              }),
+          ...styles.UL,
+          ...style,
+        }}
+        {...props}
+      />
+    );
   }
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import moment from "moment";
 
-import { Section as S, H2, H3, H4, UL, LI, P } from "./HTML";
+import { Section as S, H2, H3, H4, UL, LI, P } from "react-resume-core";
 import { Summary } from "./Common";
 
 class Title extends React.Component {

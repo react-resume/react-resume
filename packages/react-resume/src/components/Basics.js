@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Div, H1, P, A, UL, LI, Img } from "react-resume-core";
-import { Summary } from "./Common";
 import Section from "./Section";
 
 class Name extends React.Component {
@@ -137,6 +136,18 @@ class Picture extends React.Component {
     const { theme } = this.context;
     const { style, ...props } = this.props;
     return <Img style={{ ...theme.Basics.Picture, ...style }} {...props} />;
+  }
+}
+
+export class Summary extends React.Component {
+  static contextTypes = {
+    theme: React.PropTypes.object,
+  };
+
+  render() {
+    const { theme } = this.context;
+    const { style, ...props } = this.props;
+    return <P style={{ ...theme.Basics.Summary, ...style }} {...props} />;
   }
 }
 

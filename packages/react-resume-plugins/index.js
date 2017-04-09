@@ -1,3 +1,3 @@
 "use strict";
 
-exports.Github = require("react-resume-github");
+exports.Github = require("react-resume-github").default;

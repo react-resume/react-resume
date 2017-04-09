@@ -3,6 +3,19 @@ import React from "react";
 import { Div, H1, P, A, UL, LI, Img } from "react-resume-core";
 import Section from "./Section";
 
+const styles = {
+  social: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  socialImage: {
+    height: 25,
+    width: 25,
+    marginRight: 5,
+  },
+};
+
 class Name extends React.Component {
   static contextTypes = {
     theme: React.PropTypes.object,
@@ -162,9 +175,13 @@ class Profile extends React.Component {
     return (
       <LI {...props}>
         <A
-          style={{ ...theme.Basics.Profile, ...style }}
+          style={{ ...theme.Basics.Profile, ...styles.social, ...style }}
           href={url || `https://${network}.com/${username}`}
         >
+          <img
+            style={styles.socialImage}
+            src={`https://legalspace.world/mail/icon-${network}.png`}
+          />
           {children || username}
         </A>
       </LI>

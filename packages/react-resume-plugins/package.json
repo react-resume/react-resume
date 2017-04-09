@@ -1,9 +1,9 @@
 {
   "name": "react-resume-plugins",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "react-resume-github": "^0.0.8"
+    "react-resume-github": "^0.0.10"
   }
 }

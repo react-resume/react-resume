@@ -31,7 +31,12 @@ class ResumeGithub extends React.Component {
   static Projects = Projects;
 
   static propTypes = {
+    host: React.PropTypes.string,
     username: React.PropTypes.string.isRequired,
+  };
+
+  static defaultProps = {
+    host: "http://localhost:4000",
   };
 
   static contextTypes = {
@@ -44,12 +49,12 @@ class ResumeGithub extends React.Component {
   };
 
   componentWillMount() {
-    const { username } = this.props;
-    this.fetchFromGithub(username);
+    const { host, username } = this.props;
+    this.fetchFromGithub(host, username);
   }
 
-  fetchFromGithub(username) {
-    return fetch(`http://localhost:4000/github?username=${username}`)
+  fetchFromGithub(host, username) {
+    return fetch(`${host}/github?username=${username}`)
       .then(data => data.json())
       .then(data => {
         const langs = sortBy(data, "stargazers_count").reverse();

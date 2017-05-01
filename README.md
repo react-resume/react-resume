@@ -1,5 +1,7 @@
 # react-resume
 
+> :warning: **Work in progress**
+
 Build your resumé/CV with React ✨
 
 ## Getting Started
